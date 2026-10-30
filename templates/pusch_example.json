@@ -1,0 +1,107 @@
+{
+  "cases": [
+    {
+      "name": "bg2_kb6_single_cb",
+      "transport_block_size": 100,
+      "target_rate": 0.3,
+      "modulation": "QPSK",
+      "scrambling": {
+        "n_rnti": 18020,
+        "n_id": 700
+      },
+      "transport_block_bits": {
+        "source": "random",
+        "seed": 1
+      },
+      "description": "BG2 Kb=6，单码块"
+    },
+    {
+      "name": "bg2_kb9_single_cb",
+      "transport_block_size": 545,
+      "target_rate": 0.3,
+      "modulation": "QPSK",
+      "scrambling": {
+        "n_rnti": 18065,
+        "n_id": 743
+      },
+      "transport_block_bits": {
+        "source": "random",
+        "seed": 2
+      },
+      "description": "BG2 Kb=9，单码块"
+    },
+    {
+      "name": "bg1_three_cb_rv2",
+      "transport_block_size": 20000,
+      "target_rate": 0.7,
+      "modulation": "16QAM",
+      "rv": 2,
+      "num_coded_bits": 63360,
+      "scrambling": {
+        "n_rnti": 17920,
+        "n_id": 736
+      },
+      "transport_block_bits": {
+        "source": "random",
+        "seed": 3
+      },
+      "description": "BG1 Kb=22，3 个码块，rv=2"
+    },
+    {
+      "name": "bg2_two_cb_rv3",
+      "transport_block_size": 5000,
+      "target_rate": 0.2,
+      "modulation": "QPSK",
+      "rv": 3,
+      "num_coded_bits": 25600,
+      "scrambling": {
+        "n_rnti": 17921,
+        "n_id": 900
+      },
+      "transport_block_bits": {
+        "source": "random",
+        "seed": 4
+      },
+      "description": "BG2，2 个码块，rv=3"
+    },
+    {
+      "name": "msg_a_scrambling",
+      "transport_block_size": 300,
+      "target_rate": 0.3,
+      "modulation": "QPSK",
+      "scrambling": {
+        "n_rnti": 673,
+        "n_id": 9,
+        "msg_a": true,
+        "n_rapid": 17
+      },
+      "transport_block_bits": {
+        "source": "random",
+        "seed": 5
+      },
+      "description": "msgA 加扰（RA-RNTI + n_RAPID）"
+    },
+    {
+      "name": "awgn_5db",
+      "transport_block_size": 1000,
+      "target_rate": 0.3,
+      "modulation": "QPSK",
+      "num_coded_bits": 3390,
+      "scrambling": {
+        "n_rnti": 1,
+        "n_id": 0
+      },
+      "transport_block_bits": {
+        "source": "random",
+        "seed": 6
+      },
+      "channel": {
+        "type": "awgn",
+        "ebn0_db": 5.0,
+        "seed": 7
+      },
+      "description": "AWGN 5 dB，软 LLR 译码"
+    }
+  ],
+  "description": "PUSCH LDPC 端到端示例：BG1/BG2、单/多码块、rv、msgA、AWGN"
+}

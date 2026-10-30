@@ -1,0 +1,30 @@
+{
+  "description": "单用例模板：列出全部可选字段（可删减为最小配置）",
+  "name": "bg2_kb6_template",
+  "transport_block_size": 100,
+  "target_rate": 0.3,
+  "modulation": "QPSK",
+  "rv": 0,
+  "n_layers": 1,
+  "num_coded_bits": 388,
+  "base_graph": null,
+  "transport_block_bits": {
+    "source": "alternating",
+    "seed": 0
+  },
+  "scrambling": {
+    "n_rnti": 46689,
+    "n_id": 700,
+    "codeword_index": 0,
+    "msg_a": false,
+    "n_rapid": null
+  },
+  "ldpc": {
+    "max_iter": 30,
+    "alpha": 0.8,
+    "early_stop": true
+  },
+  "channel": {
+    "type": "none"
+  }
+}
